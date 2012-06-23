@@ -1,0 +1,388 @@
+/* 
+    Document   : style
+    Created on : Jun 22, 2012, 7:24:51 PM
+    Author     : newe1344
+    Description:
+        Purpose of the stylesheet follows.
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+root { 
+    display: block;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 44px;
+    color: #666;
+}
+
+#stage {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    left: -100px;
+}
+
+.anim {
+    /* fight the flash just before the animation */
+    -webkit-backface-visibility: hidden;
+}
+
+#box1 {
+    position: relative;
+    top: 100px;
+    left: 45%;
+    width: 251px;
+    visibility: visible;  
+    
+    z-index: 10;
+}
+
+#box1 .bg {
+    position: absolute;
+    top: -70px;
+    left: -250px;
+    width: 251px;
+    height: 318px;
+    background: url(../images/emptyCubes.jpg) -97px 0 scroll no-repeat;
+    
+}
+
+#box2 {
+    position: relative;
+    top: 90px;
+    left: 36%;
+    width: 251px;
+    
+    z-index: 50;
+}
+
+#box2 .bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 110px;
+    height: 217px;
+    background: url(../images/emptyCubes.png) -9px -12px scroll no-repeat;
+}
+
+#box3 {
+    position: relative;
+    top: 50px;
+    left: 37%;
+    width: 98px;
+    
+    z-index: 40;
+}
+
+#box3 .bg {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 98px;
+    height: 170px;
+    background-size: 319px 345px;
+    background: url(../images/emptyCubes.jpg) 0px 0px scroll no-repeat;
+    
+}
+
+#box4 {
+    position: relative;
+    top: 21px;
+    left: 45.5%;
+    width: 98px;
+    
+    z-index: 40;
+}
+
+#box4 .bg {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 132px;
+    height: 217px;
+    background-size: 319px 345px;
+    background: url(../images/emptyCubes.png) -264px 0px scroll no-repeat;
+}
+
+#box5 {
+    position: relative;
+    top: 27px;
+    left: 46.5%;
+    width: 98px;
+    
+    z-index: 40;
+}
+
+#box5 .bg {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 132px;
+    height: 217px;
+    background-size: 319px 345px;
+    background: url(../images/emptyCubes.png) -133px 0px scroll no-repeat;
+}
+
+#box6 {
+    position: relative;
+    top: 32px;
+    left: 57%;
+    width: 98px;
+    
+    z-index: 40;
+}
+
+#box6 .bg {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 132px;
+    height: 217px;
+    background-size: 319px 345px;
+    background: url(../images/emptyCubes.png) -399px 0px scroll no-repeat;
+}
+
+#box7 {
+    position: relative;
+    top: 45px;
+    left: 58.5%;
+    width: 98px;
+    
+    z-index: 30;
+}
+
+#box7 .bg {
+    position: absolute;
+    top: -45px;
+    left: 101px;
+    width: 100px;
+    height: 165px;
+    background-size: 319px 345px;
+    background: url(../images/emptyCubes.jpg) 0px -175px scroll no-repeat;
+}
+
+#box8 {
+    position: relative;
+    top: 128px;
+    left: 68.5%;
+    width: 98px;
+    
+    z-index: 30;
+}
+
+#box8 .bg {
+    position: absolute;
+    top: -45px;
+    left: 103px;
+    width: 132px;
+    height: 217px;
+    background-size: 319px 345px;
+    background: url(../images/emptyCubes.png) -539px 0px scroll no-repeat;
+}
+
+#text {
+    position: relative;
+    top: 331px;
+    left: 66px;
+    margin: 0 auto;
+    text-align: center;
+    width: 907px;
+    white-space:nowrap;
+    overflow: hidden;
+    border-right: 2px solid powderblue;
+    
+    z-index: 100;
+    display: none;
+}
+
+/*
+    ani0
+*/
+
+#box1 .bg {
+ 
+    -webkit-animation: ani0 2.5s ease-in-out 0s;
+    
+    /* scale the background image */
+    -webkit-background-size: cover;
+    /* add hardware acceleration */
+    -webkit-transform: translateZ(0);
+    /* smooth text because of the 3D rendering engine */
+    -webkit-font-smoothing: antialiased;
+}
+
+    @-webkit-keyframes ani0 {
+        0% { width: 0; height: 0; top: 0px; left: 0px; }
+        30% { width: 251px; height: 318px; }
+        40% { width: 251px; height: 318px; top: 0px; left: 0px; }
+        60% { top: 0px; left: -250px; }
+        80% { top: 0px; left: -250px; }
+        100% { top: -70px; left: -250px; }
+    }
+    
+#box2 .bg {
+ 
+    -webkit-animation: ani1 4s ease-in-out 0s;
+    
+    /* scale the background image */
+    -webkit-background-size: cover;
+    /* add hardware acceleration */
+    -webkit-transform: translateZ(0);
+    /* smooth text because of the 3D rendering engine */
+    -webkit-font-smoothing: antialiased;
+}
+
+    @-webkit-keyframes ani1 {
+        0% {  top: -20px; left: -20px; opacity: 0; }
+        40% {  top: -20px; left: -20px; opacity: 0; }
+        50% {  top: -20px; left: -20px; opacity: 1; }
+        60% {  top: 0px; left: -20px; opacity: 1; }
+        70% {  top: 0px; left: 0px; opacity: 1; }
+        100% {  top: 0px; left: 0px; opacity: 1; }
+    }
+    
+#box3 .bg {
+ 
+    -webkit-animation: ani2 4s ease-in-out 0s;
+    
+    /* scale the background image */
+/*    -webkit-background-size: cover;*/
+    /* add hardware acceleration */
+    -webkit-transform: translateZ(0);
+    /* smooth text because of the 3D rendering engine */
+    -webkit-font-smoothing: antialiased;
+}
+
+    @-webkit-keyframes ani2 {
+        0% {  top: -50px; left: 0px; opacity: 0; }
+        40% {  top: -50px; left: 0px; opacity: 0; }
+        50% {  top: -50px; left: 0px; opacity: 1; }
+        60% {  top: -50px; left: 0px; opacity: 1; }
+        70% {  top: -50px; left: 100px; opacity: 1; }
+        80% {  top: -50px; left: 100px; opacity: 1; }
+        100% {  top: 50px; left: 100px; opacity: 1; }
+        
+    }
+    
+#box4 .bg {
+ 
+    -webkit-animation: ani3 4.5s ease-in-out 0s;
+    
+    
+    /* scale the background image */
+/*    -webkit-background-size: cover;*/
+    /* add hardware acceleration */
+    -webkit-transform: translateZ(0);
+    /* smooth text because of the 3D rendering engine */
+    -webkit-font-smoothing: antialiased;
+}
+
+    @-webkit-keyframes ani3 {
+        0% {  top: 50px; left: 0px; opacity: 0; }
+        40% {  top: 50px; left: 0px; opacity: 0; }
+        50% {  top: 50px; left: 0px; opacity: 1; }
+        60% {  top: 150px; left: 0px; opacity: 1; }
+        70% {  top: 150px; left: 0px; opacity: 1; }
+        80% {  top: 150px; left: 100px; opacity: 1; }
+        90% {  top: 150px; left: 100px; opacity: 1; }
+    }
+    
+#box5 .bg {
+ 
+    -webkit-animation: ani4 4.5s ease-in-out 0s;
+    
+    /* scale the background image */
+/*    -webkit-background-size: cover;*/
+    /* add hardware acceleration */
+    -webkit-transform: translateZ(0);
+    /* smooth text because of the 3D rendering engine */
+    -webkit-font-smoothing: antialiased;
+}
+
+    @-webkit-keyframes ani4 {
+        0% {  top: 50px; left: 0px; opacity: 0; }
+        40% {  top: 50px; left: 0px; opacity: 0; }
+        50% {  top: 50px; left: 0px; opacity: 0; }
+        60% {  top: 50px; left: 0px; opacity: 1; }
+        70% {  top: 50px; left: 100px; opacity: 1; }
+        80% {  top: 50px; left: 100px; opacity: 1; }
+        90% {  top: 50px; left: 100px; opacity: 1; }
+    }
+    
+#box6 .bg {
+ 
+    -webkit-animation: ani5 4.5s ease-in-out 0s;
+    
+    /* add hardware acceleration */
+    -webkit-transform: translateZ(0);
+    /* smooth text because of the 3D rendering engine */
+    -webkit-font-smoothing: antialiased;
+}
+
+    @-webkit-keyframes ani5 {
+        0% {  top: 150px; left: -200px; width: 0px; height: 0px; }
+        50% {  top: 150px; left: -200px; width: 0px; height: 0px; }
+        60% {  top: 150px; left: -200px; width: 132px; height: 217px; }
+        70% {  top: 50px; left: -107px; width: 132px; height: 217px; }
+        80% {  top: 50px; left: -107px; width: 0px; height: 0px; }
+        90% {  top: 50px; left: 100px; width: 0px; height: 0px; }
+        100% {  top: 50px; left: 100px; width: 132px; height: 217px; }
+    }
+    
+#box7 .bg {
+ 
+    -webkit-animation: ani6 5.5s ease-in-out 0s;
+    
+    /* add hardware acceleration */
+    -webkit-transform: translateZ(0);
+    /* smooth text because of the 3D rendering engine */
+    -webkit-font-smoothing: antialiased;
+}
+
+    @-webkit-keyframes ani6 {
+        0% {  top: 50px; left: 101px; opacity: 0; }
+        70% {  top: 50px; left: 101px; opacity: 0; }
+        80% {  top: 50px; left: 101px; opacity: 1; }
+        90% {  top: -45px; left: 101px; opacity: 1; }
+    }
+    
+#box8 .bg {
+ 
+    -webkit-animation: ani7 5.5s ease-in-out 0s;
+    
+    /* add hardware acceleration */
+    -webkit-transform: translateZ(0);
+    /* smooth text because of the 3D rendering engine */
+    -webkit-font-smoothing: antialiased;
+}
+
+    @-webkit-keyframes ani7 {
+        0% {  top: -45px; left: 0px; opacity: 0; }
+        20% {  top: -45px; left: 0px; opacity: 0; }
+        50% {  top: -45px; left: 0px; opacity: 0; }
+        65% {  top: -45px; left: 0px; opacity: 1; }
+        70% {  top: -45px; left: 103px; opacity: 1; }
+    }
+    
+#text {
+    -webkit-animation: typing 3s steps(47, end) 0s, carrot 0.8s step-end 3s infinite;
+    
+    /* add hardware acceleration */
+    -webkit-transform: translateZ(0);
+    /* smooth text because of the 3D rendering engine */
+    -webkit-font-smoothing: antialiased;
+}
+
+    @-webkit-keyframes typing {
+        0% {  width: 0; }
+        100% {  width: 907px; }
+    }
+    
+    @-webkit-keyframes carrot {
+        0% {  border-color: transparent; }
+        50% {  border-color: powderblue; }
+        100% {  border-color: transparent; }
+    }
