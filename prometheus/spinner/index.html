@@ -1,0 +1,209 @@
+<!-- 
+
+Author: Mike Newell © 2012
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/charts.css" />
+        <link rel="stylesheet" type="text/css" href="css/loop-text.css" />
+    </head>
+    <body>
+        <video id="bg-video" width="100%" height="100%">
+<!--            <source src="video/bg.mp4" type="video/mp4" />
+            <source src="video/bg.ogv" type="video/ogg" />-->
+            <source src="video/bg.webm" type="video/webm" />
+        </video>
+        <canvas id="buffer"></canvas>
+        <canvas id="output"></canvas>
+        <div id="wrap">
+            
+            <div id="scene" class="flicker animate">
+                <div id="overlay-rotate" class=""></div>
+                
+                <span id="clock">&nbsp;</span>
+                
+                <div id="box1" class="spinning-fast animate"></div>
+                <div id="box2" class="spinning-reverse-fast animate"></div>
+                <div id="box3" class="spinning-slow animate"></div>
+                <div id="lines" class="spinning-reverse-slow animate"></div>
+                <h1 id="text" class="typewriting animate">DR ELIZABETH SHAW</h1>
+                
+                <div id="charts">
+                    <div id="label-1" class="label">t-2837rb</div>
+                    <div id="bar-1">
+                        <div id="bar-1-bg"></div>
+                        <div id="bar-1-animate" class="animate bar-1"></div>
+                    </div>
+                    <div id="label-2" class="label">t-23as32</div>
+                    <div id="bar-2">
+                        <div id="bar-2-bg"></div>
+                        <div id="bar-2-animate" class="animate bar-2"></div>
+                    </div>
+                    <div id="label-3" class="label">t-2823rf</div>
+                    <div id="bar-3">
+                        <div id="bar-3-bg"></div>
+                        <div id="bar-3-animate" class="animate bar-3"></div>
+                    </div>
+                    <div id="label-4" class="label">t-182grb</div>
+                    <div id="bar-4">
+                        <div id="bar-4-bg"></div>
+                        <div id="bar-4-animate" class="animate bar-4"></div>
+                    </div>
+                </div>
+                
+                <div id="box4" class="spinning-slow animate"></div>
+                
+                <div id="loop-text" class="loop-text animate">
+                    <div id="loop-window">
+                        <div id="loop-text-inner" class="loop-text-animate animate">
+                            Lorizzle fo shizzle you son of a bizzle bling bling amizzle, gangsta bizzle elizzle. Phat sapizzle velizzle, aliquet volutpizzle, pimpin' get down get down, sure vel, shiznit. Pellentesque eget tortor. Sizzle eros. Shizzlin dizzle izzle gangsta izzle funky fresh tempizzle shizzle my nizzle crocodizzle. Mauris bizzle fo shizzle izzle turpizzle. Fizzle izzle boofron. Pellentesque the bizzle rhoncizzle nisi. In hac habitasse platea dictumst. Break yo neck, yall dapibus. Curabitizzle tellizzle urna, i'm in the shizzle fo shizzle, mattizzle black, brizzle vitae, my shizz. My shizz shizzle my nizzle crocodizzle. Bizzle sempizzle velit away its fo rizzle.
+
+Dizzle fizzle urna ut nisl. The bizzle quis arcu. Maecenizzle fo shizzle, ipsizzle malesuada malesuada scelerisque, nulla fo shizzle euismizzle felis, izzle rizzle boofron nulla izzle pimpin'. Vivamus ullamcorpizzle, tortor mah nizzle owned pot, sheezy nunc bizzle shit, check out this shizzle my nizzle crocodizzle leo fo shizzle my nizzle ghetto dolizzle. Maurizzle phat, orci pizzle volutpizzle consectetuer, sizzle for sure luctizzle nisi, izzle bibendum enim fizzle izzle nisl. Nullam bling bling daahng dawg pizzle orci yippiyo viverra. Fo shizzle nec ghetto. Curabitur nizzle shiznit vel gangsta izzle facilisizzle. Maecenizzle sapizzle nulla, iaculizzle dizzle, molestie sizzle, i'm in the shizzle a, erizzle. Ass vitae turpizzle shit sheezy bibendizzle stuff. Tellivizzle pulvinar consectetuer check out this. Aliquizzle doggy volutpizzle. Sure ut leo da bomb away pretizzle faucibizzle. Crizzle nec we gonna chung brizzle dui condimentum fo shizzle my nizzle. Ut nisl. I'm in the shizzle izzle check out this. Brizzle tellivizzle ipsum crackalackin mi. Doggy izzle fo shizzle.
+
+Praesent shut the shizzle up turpis its fo rizzle leo bibendizzle funky fresh. Fo shizzle vestibulizzle shiz vizzle massa. Quisque da bomb gangsta magna. Morbi commodo, nisl crackalackin bibendum nizzle, yo mamma dolor that's the shizzle sure, izzle auctor justo pimpin' quizzle boom shackalack. Pot id mah nizzle cool amizzle eros fo shizzle phat. Vivamus sure pede i'm in the shizzle fo shizzle. In rhoncus nonummy leo. Its fo rizzle ipsum dolizzle sit pizzle, stuff sizzle elit. Bling bling nisi uhuh ... yih!, posuere sheezy amet, facilisis go to hizzle, tristique get down get down, libero. Curabitizzle check out this faucibizzle diam. Ut brizzle fo shizzle. Boofron sed risizzle a funky fresh accumsizzle yippiyo. Bling bling condimentum things laoreet nunc. Aenizzle sodales, go to hizzle quizzle for sure lacinia, lectus you son of a bizzle commodo felizzle, dope ullamcorpizzle black nizzle brizzle pimpin'. Things leo quam, aliquizzle sit amizzle, da bomb vitae, pulvinizzle pulvinizzle, felis.
+
+Nunc tellus lorizzle, pulvinar ac, owned egizzle, uhuh ... yih! id, dizzle. Fizzle da bomb leo a sizzle hendrerit mattizzle. Pellentesque fo shizzle my nizzle gizzle in erizzle commodo ullamcorper. Etizzle sheezy fermentizzle ligula. Shut the shizzle up odio. Pimpin' fo shizzle metizzle izzle dolor shizzle my nizzle crocodizzle auctor. Sure fo shizzle viverra mofo. Curabitizzle sollicitudin that's the shizzle i saw beyonces tizzles and my pizzle went crizzle purus. Morbi venenatis ligula sit amizzle mammasay mammasa mamma oo sa. Nizzle lobortis enizzle fo arcu. Cum sociis check it out penatibizzle izzle magnizzle crackalackin parturient montes, nascetizzle gizzle mizzle.
+
+Vestibulizzle ante shiznit primizzle own yo' faucibus orci luctizzle izzle ultrices the bizzle cubilia Curae; Mah nizzle bling bling nulla stuff bling bling ornare aliquizzle. Pimpin' euismizzle fo shizzle. Praesent volutpizzle accumsizzle go to hizzle. Fizzle diam dui, fo shizzle get down get down, gravida sizzle, bling bling vitae, ante. Shizzlin dizzle things bibendizzle shiznit. Bling bling in rizzle et augue fo shizzle mah nizzle fo rizzle, mah home g-dizzle . Nam sizzle fo shizzle my nizzle. Vivamizzle phat. Praesent eu lacizzle pot lacizzle crunk adipiscing. Ma nizzle we gonna chung tellus a felis fizzle mollizzle. Integer rizzle. Nizzle funky fresh. Crazy magna check out this, funky fresh vitae, pot izzle, imperdiet egestas, fo shizzle my nizzle. Bizzle daahng dawg sodales lectizzle. Etizzle tristique sem. Phasellus mi gizzle, convallis fizzle, gangsta vizzle, fo shizzle izzle, nibh. Fusce shiznit maurizzle, facilisis eu, sollicitudin eu, crunk fizzle, ass. Ass shiznit pot, sure molestie, uhuh ... yih! ut, blandizzle sizzle fizzle, enim.
+
+Cras aliquam get down get down izzle fizzle. Away sociis brizzle penatibus izzle magnis dizzle parturient montizzle, away ridiculizzle fo shizzle. Ut purus dizzle, dizzle quizzle, i saw beyonces tizzles and my pizzle went crizzle izzle, sollicitudizzle sure, urna. Maurizzle viverra urna get down get down crazy. Crazy sagittizzle. Shizzle my nizzle crocodizzle fizzle orci, fringilla shizzle my nizzle crocodizzle, aliquam a, you son of a bizzle at, ipsizzle. Crizzle imperdizzle, away sit amizzle commodo ma nizzle, dui check it out pizzle enizzle, a hendrerit hizzle get down get down scelerisque velit. Pellentesque quis odio. Uhuh ... yih! fo shizzle bizzle dawg da bomb. Nulla .
+                        </div>
+                    </div>
+                </div>
+                <div id="bottom-text">rt-24 blue label 42 <br />274 - hig</div>
+            </div>
+        </div>
+        <div id="fuzz" class="animate fuzz"></div>
+        <div id="gradient-red" class="animate gradient-red"></div>
+        <div id="gradient-blue" class="animate gradient-blue"></div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            (function($) {
+                $(window).load(function() {
+                    var w = $(document).width();
+                    var h = $(document).height();
+                    
+                    var video = document.getElementById('bg-video'),
+                        outputCanvas = document.getElementById('output'),
+                        bufferCanvas = document.getElementById('buffer'),
+                        output = outputCanvas.getContext('2d'),
+                        buffer = bufferCanvas.getContext('2d'),
+                        interval;
+                    
+                    $('#buffer').attr({
+                        width: w,
+                        height: h
+                    });
+                    
+                    $('#output').attr({
+                        width: w,
+                        height: h
+                    });
+                    
+                    $('#bg-video').attr({
+                        width: w,
+                        height: h
+                    });
+                    
+                    function processFrame() {
+                        buffer.drawImage(video, 0, 0);
+                        
+                        var image = buffer.getImageData(0, 0, w, h),
+                            imageData = image.data;
+                            
+                        for(var i = 3, len = imageData.length; i < len; i = i + 4) {
+                            imageData[i] = imageData[i] - 235;
+                        }
+                        
+                        output.putImageData(image, 0, 0, 0, 0, w, h);
+                    }
+                    
+                    video.addEventListener('play', function() {
+                        clearInterval(interval);
+                        interval = setInterval(processFrame, 40);
+                    });
+                    
+                    video.addEventListener('ended', function() {
+                        clearInterval(interval);
+                    });
+                    
+                    $('#fuzz').on('animationiteration webkitAnimationIteration', function(evt) {
+                        video.play();
+                    });
+                    
+                });
+            })(jQuery);
+        </script>
+        <script type="text/javascript">
+        
+            
+            
+            (function() {
+                function updateClock ( ) {
+                    var currentTime = new Date ( );
+
+                    var currentHours = currentTime.getHours ( );
+                    var currentMinutes = currentTime.getMinutes ( );
+                    var currentSeconds = currentTime.getSeconds ( );
+
+                    // Pad the minutes and seconds with leading zeros, if required
+                    currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+                    currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+
+                    // Choose either "AM" or "PM" as appropriate
+                    var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+
+                    // Convert the hours component to 12-hour format if needed
+                    currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+
+                    // Convert an hours component of "0" to "12"
+                    currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+
+                    // Compose the string for display
+                    var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+
+                    // Update the time display
+                    document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+                }
+                
+                setInterval(updateClock, 1000);
+            })()
+
+        </script>
+        
+        <script>
+            
+            function updatePerpective(value) {
+                document.getElementById('wrap').style.webkitPerspective = value;
+            }
+
+            function setPerspectiveOrigin(event) {
+                var container = document.getElementById('wrap');
+
+                var offsetX = event.pageX - container.offsetLeft;
+                var offsetY = event.pageY - container.offsetTop;
+
+                var originStyle = (900 * offsetX / container.offsetWidth) + '% ' + (500 * offsetY / container.offsetHeight) + '%';
+                container.style.webkitPerspectiveOrigin = originStyle;
+            }
+
+            window.addEventListener('load', function() {
+                var container = document.getElementById('wrap');
+                
+                window.addEventListener('mousemove', setPerspectiveOrigin, false);
+                window.addEventListener('mouseout', function() {
+                    container.style.webkitPerspectiveOrigin = '50% 50%';
+                }, false);
+                
+                updatePerpective(300)
+            }, false);
+  
+        </script>
+    </body>
+</html>

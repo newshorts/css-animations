@@ -1,0 +1,207 @@
+/* 
+    Document   : charts
+    Created on : Jun 23, 2012, 6:56:16 PM
+    Author     : newe1344
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#charts {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: -32px;
+    left: 455px;
+    
+    
+    -webkit-transform: translateZ( -2px );
+}
+
+.label {
+    font-size: 8px;
+    position: absolute;
+}
+
+/* bar 1 */
+
+#label-1 {
+    top: 202px;
+    left: 148px;
+}
+
+#bar-1 {
+    position: relative;
+    top: 200px;
+    left: 200px;
+    width: 100px;
+}
+
+#bar-1-bg {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: orangered;
+    
+    opacity: 0.3;
+}
+
+#bar-1-animate {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: orangered;
+    
+    opacity: 0.4;
+}
+
+.bar-1 {
+    -webkit-animation: bar-1 300s ease-in-out 0s infinite;
+}
+
+@-webkit-keyframes bar-1 {
+    0% {  width: 0px; }
+    100% { width: 100px; }
+}
+
+/* bar 2 */
+
+#label-2 {
+    top: 217px;
+    left: 148px;
+}
+
+#bar-2 {
+    position: relative;
+    top: 215px;
+    left: 200px;
+    width: 100px;
+}
+
+#bar-2-bg {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.3;
+}
+
+#bar-2-animate {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.4;
+}
+
+.bar-2 {
+    -webkit-animation: bar-2 100s ease-in-out 0s infinite;
+}
+
+@-webkit-keyframes bar-2 {
+    0% {  width: 0px; }
+    100% { width: 100px; }
+}
+
+/* bar 3 */
+
+#label-3 {
+    top: 232px;
+    left: 148px;
+}
+
+#bar-3 {
+    position: relative;
+    top: 230px;
+    left: 200px;
+    width: 100px;
+}
+
+#bar-3-bg {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.3;
+}
+
+#bar-3-animate {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.4;
+}
+
+.bar-3 {
+    -webkit-animation: bar-3 75s cubic-bezier(0.2, 0.9, 0.4, 0.1) 0s infinite;
+}
+
+@-webkit-keyframes bar-3 {
+    0% {  width: 0px; }
+    100% { width: 100px; }
+}
+
+/* bar 4 */
+
+#label-4 {
+    top: 247px;
+    left: 148px;
+}
+
+#bar-4 {
+    position: relative;
+    top: 245px;
+    left: 200px;
+    width: 125px;
+}
+
+#bar-4-bg {
+    position: absolute;
+    width: 125px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.3;
+}
+
+#bar-4-animate {
+    position: absolute;
+    width: 125px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.4;
+}
+
+.bar-4 {
+    -webkit-animation: bar-4 150s cubic-bezier(0.9, 0.2, 0.4, 1) 0s infinite;
+}
+
+@-webkit-keyframes bar-4 {
+    0% {  width: 0px; }
+    100% { width: 125px; }
+}
