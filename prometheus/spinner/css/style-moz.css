@@ -1,0 +1,578 @@
+/******************************************************************************
+                            ANIMATIONS & BASE STYLES
+******************************************************************************/
+
+/* 
+    Document   : style
+    Created on : Jun 23, 2012, 3:33:27 PM
+    Author     : newe1344
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
+
+root { 
+    display: block;
+}
+
+body {
+    background: url(../images/bg-dark.png) scroll repeat;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 44px;
+    color: aliceblue;
+}
+
+#bg-video {
+/*    opacity: 0.3;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#buffer {
+    display: none;
+}
+
+#output, #buffer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#wrap {
+    width: 960px;
+    margin: 0 auto;
+    z-index: 10;
+
+}
+
+#scene {
+    position: relative;
+    width: 900px;
+    height: 900px;
+    background: url(../images/tech-bg.png) 0 0 scroll no-repeat;
+/*    background: url(../images/tech-bg.png) 0 0 scroll no-repeat, url(../images/overlay-hud.png) 0 0 scroll no-repeat;*/
+    opacity: .3;
+    
+    
+/*    -moz-perspective-origin: 50% 50%;*/
+/*    -moz-perspective: 1900px;*/
+    -moz-transform: rotateY(-1deg);
+    -moz-transform-style: preserve-3d;
+}
+
+#overlay-rotate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 891px;
+    height: 890px;
+    background: url(../images/overlay-rotate.png) 0 0 scroll no-repeat;
+    opacity: 0.2;
+    
+    -moz-transform: translateZ( -3px );
+        
+}
+
+#clock {
+    position: absolute;
+    top: 64px;
+    left: 66px;
+    font-size: 57px;
+    opacity: 0.5;
+    width: 450px;
+    text-align: right;
+    
+    -moz-transform: translateZ( -1px );
+}
+
+#bottom-text {
+    position: absolute;
+    top: 729px;
+    left: 119px;
+    font-size: 5px;
+    width: 100px;
+    
+    -moz-transform: translateZ( -3px );
+}
+
+#box1 {
+    position: absolute;
+    top: 326px;
+    left: 326px;
+    width: 248px;
+    height: 248px;
+    background: url(../images/blue.png) 0 0 scroll no-repeat;
+    
+    
+/*    -moz-transform-style: preserve-3d;*/
+    -moz-transform: translateZ( 1px );
+}
+
+#box2 {
+    position: absolute;
+    top: 326px;
+    left: 326px;
+    width: 248px;
+    height: 248px;
+    background: url(../images/red.png) 0 0 scroll no-repeat;
+    
+/*    -moz-transform-style: preserve-3d;*/
+    -moz-transform: translateZ( 2px );
+}
+
+#box3 {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    width: 500px;
+    height: 500px;
+    background: url(../images/large-blue.png) 0 0 scroll no-repeat;
+    
+/*    -moz-transform-style: preserve-3d;*/
+    -moz-transform: translateZ( 4px );
+}
+
+#box4 {
+    position: absolute;
+    top: 249px;
+    left: 14px;
+    width: 100px;
+    height: 100px;
+    background: url(../images/orange.png) 0 0 scroll no-repeat;
+    background-size: 100px 100px;
+    
+    -moz-transform-style: preserve-3d;
+    -moz-transform: translateZ( 3px );
+}
+
+#lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 900px;
+    background: url(../images/blue-lines.png) 0 0 scroll no-repeat;
+    
+    -moz-transform: translateZ( 1px );
+}
+
+#text {
+    position: absolute;
+    top: 705px;
+    width: 221px;
+    left: 456px;
+    border-right: 2px solid white;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    -moz-transform: translateZ( 2px );
+}
+
+#fuzz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 900px;
+/*    height: 100%;*/
+    
+    background: url(../images/fuzz.png) scroll repeat;
+    
+    z-index: 20;
+}
+
+#gradient-blue {
+    position: absolute;
+    top: -500px;
+    left: 290px;
+    width: 815px;
+    height: 813px;
+    opacity: 0.8;
+    
+    background: url(../images/gradient-blue.png) scroll repeat;
+}
+
+#gradient-red {
+    position: absolute;
+    top: 309px;
+    left: 547px;
+    width: 277px;
+    height: 276px;
+    opacity: 0.2;
+    
+    background: url(../images/gradient-red.png) scroll repeat;
+    
+    
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+
+
+
+/*
+    ANIMATIONS
+*/
+
+.flicker {
+    -moz-animation: flicker 60s linear 0s infinite;
+}
+
+.animate {
+    /* scale the background image */
+    -moz-background-size: cover;
+    /* add hardware acceleration */
+    -moz-transform: translateZ(0);
+    /* smooth text because of the 3D rendering engine */
+    -moz-font-smoothing: antialiased;
+}
+
+.fuzz {
+    -moz-animation: fuzz 13s linear 0s infinite;
+}
+
+.gradient-red {
+    -moz-animation: redGlow 50s ease-in-out 0s infinite;
+}
+
+.typewriting {
+    -moz-animation: typewriter 3s steps(17, end) 0s, carrot 0.8s step-end 3s infinite;
+}
+
+.spinning-slow {
+    -moz-animation: spin 30s cubic-bezier(0.6, 0.6, 0.2, 0.9) infinite 0s;
+}
+
+.spinning-fast {
+    -moz-animation: spin 20s cubic-bezier(0.2, 0.6, 0.2, 0.9) infinite 0s;
+}
+
+.spinning-reverse-slow {
+    -moz-animation: spinReverse 45s cubic-bezier(0.9, 0.2, 0.4, 1) infinite 0s;
+}
+
+.spinning-reverse-fast {
+    -moz-animation: spinReverse 20s cubic-bezier(0.6, 0.2, 0.2, 0.9) infinite 0s;
+}
+
+
+
+@-moz-keyframes spin {
+    0% {  -moz-transform:rotate(0deg) translateZ( 1px );  }
+    50% { -moz-transform:rotate(180deg) translateZ( 1px );  }
+    100% { -moz-transform:rotate(360deg) translateZ( 1px );  }
+}
+
+@-moz-keyframes spinReverse {
+    0% {  -moz-transform:rotate(360deg) translateZ( 2px ); }
+    50% { -moz-transform:rotate(180deg) translateZ( 2px ); }
+    100% { -moz-transform:rotate(0deg) translateZ( 2px ); }
+}
+
+@-moz-keyframes typewriter {
+    0% { width: 0; }
+    50% { width: 221px; }
+}
+
+@-moz-keyframes carrot {
+    0% {  border-color: transparent; }
+    50% {  border-color: white; }
+    100% {  border-color: transparent; }
+}
+
+@-moz-keyframes fuzz {
+    0% { opacity: 0; }
+    40% { opacity: 0; }
+    50% { opacity: 1; }
+    60% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes flicker {
+    0% { opacity: 1; }
+    
+    1% { opacity: 1; }
+    1.1% { opacity: 0; }
+    1.2% { opacity: 1; }
+    1.5% { opacity: 0; }
+    1.7% { opacity: 1; }
+    1.8% { opacity: 0; }
+    1.9% { opacity: 1; }
+
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes redGlow {
+    0% { opacity: 0.2; }
+    50% { opacity: 0.8; }
+}
+
+/******************************************************************************
+                                    CHARTS
+******************************************************************************/
+
+/* 
+    Document   : charts
+    Created on : Jun 23, 2012, 6:56:16 PM
+    Author     : newe1344
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#charts {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: -32px;
+    left: 455px;
+    
+    
+    -moz-transform: translateZ( -2px );
+}
+
+.label {
+    font-size: 8px;
+    position: absolute;
+}
+
+/* bar 1 */
+
+#label-1 {
+    top: 202px;
+    left: 148px;
+}
+
+#bar-1 {
+    position: relative;
+    top: 200px;
+    left: 200px;
+    width: 100px;
+}
+
+#bar-1-bg {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: orangered;
+    
+    opacity: 0.3;
+}
+
+#bar-1-animate {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: orangered;
+    
+    opacity: 0.4;
+}
+
+.bar-1 {
+    -moz-animation: bar-1 300s ease-in-out 0s infinite;
+}
+
+@-moz-keyframes bar-1 {
+    0% {  width: 0px; }
+    100% { width: 100px; }
+}
+
+/* bar 2 */
+
+#label-2 {
+    top: 217px;
+    left: 148px;
+}
+
+#bar-2 {
+    position: relative;
+    top: 215px;
+    left: 200px;
+    width: 100px;
+}
+
+#bar-2-bg {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.3;
+}
+
+#bar-2-animate {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.4;
+}
+
+.bar-2 {
+    -moz-animation: bar-2 100s ease-in-out 0s infinite;
+}
+
+@-moz-keyframes bar-2 {
+    0% {  width: 0px; }
+    100% { width: 100px; }
+}
+
+/* bar 3 */
+
+#label-3 {
+    top: 232px;
+    left: 148px;
+}
+
+#bar-3 {
+    position: relative;
+    top: 230px;
+    left: 200px;
+    width: 100px;
+}
+
+#bar-3-bg {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.3;
+}
+
+#bar-3-animate {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.4;
+}
+
+.bar-3 {
+    -moz-animation: bar-3 75s cubic-bezier(0.2, 0.9, 0.4, 0.1) 0s infinite;
+}
+
+@-moz-keyframes bar-3 {
+    0% {  width: 0px; }
+    100% { width: 100px; }
+}
+
+/* bar 4 */
+
+#label-4 {
+    top: 247px;
+    left: 148px;
+}
+
+#bar-4 {
+    position: relative;
+    top: 245px;
+    left: 200px;
+    width: 125px;
+}
+
+#bar-4-bg {
+    position: absolute;
+    width: 125px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.3;
+}
+
+#bar-4-animate {
+    position: absolute;
+    width: 125px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: #00c0ff;
+    
+    opacity: 0.4;
+}
+
+.bar-4 {
+    -moz-animation: bar-4 150s cubic-bezier(0.9, 0.2, 0.4, 1) 0s infinite;
+}
+
+@-moz-keyframes bar-4 {
+    0% {  width: 0px; }
+    100% { width: 125px; }
+}
+
+/******************************************************************************
+                                LOOPING TEXT
+******************************************************************************/
+
+/* 
+    Document   : loop-text
+    Created on : Jun 23, 2012, 7:51:33 PM
+    Author     : newe1344
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#loop-text {
+    position: relative;
+    top: -264px;
+    left: 665px;
+    width: 100px;
+    height: 200px;
+    
+    -moz-transform-style: preserve-3d;
+    -moz-transform: translateZ( -1px );
+}
+
+#loop-window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+}
+
+#loop-text-inner {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100px;
+    font-size: 8px;
+    text-align: center;
+}
+
+.loop-text-animate {
+    -moz-animation: loop-text 100s linear 0s infinite;
+}
+
+@-moz-keyframes loop-text {
+    0% {  top: 200px; -moz-transform: translateZ( -1px ); }
+    100% { top: -9000px; -moz-transform: translateZ( -1px ); }
+}
